@@ -327,6 +327,44 @@ modalArticleTrigger.forEach(item => {
     modal.classList.add('modal--active');
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const numbers = document.querySelectorAll(".result__number-big .inc");
+  const animateNumber = (element, target) => {
+    let current = 0;
+    const increment = target / 100;
+    const duration = 2000;
+    const interval = duration / 100;
+    const counter = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(counter);
+      }
+      element.textContent = Math.floor(current);
+    }, interval);
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const numberElement = entry.target;
+        const targetNumber = parseInt(numberElement.getAttribute("data-target"), 10);
+        animateNumber(numberElement, targetNumber);
+        numberElement.classList.add("active");
+        observer.unobserve(numberElement);
+      }
+    });
+  }, {
+    threshold: 0.5
+  }); // Срабатывание на 50% видимости элемента
+
+  numbers.forEach(number => {
+    const text = number.textContent.trim();
+    const targetNumber = parseInt(text.replace(/[^\d]/g, ""), 10);
+    number.setAttribute("data-target", targetNumber);
+    number.textContent = "0";
+    observer.observe(number);
+  });
+});
 
 /***/ }),
 
