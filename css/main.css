@@ -795,6 +795,13 @@ svg > rect {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .deb__items {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
 .deb__item {
   position: relative;
   background-color: var(--grey);
@@ -814,6 +821,12 @@ svg > rect {
   font-size: clamp(18px, 2vw, 24px);
   text-transform: uppercase;
   color: var(--black);
+}
+@media (max-width: 768px) {
+  .deb__item-title {
+    padding: 15px;
+    font-size: 16px;
+  }
 }
 
 .result__wrapper {
