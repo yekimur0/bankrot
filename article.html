@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Банкротус</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <header class="header">
+    <div class="container header__container">
+        <div class="header__start">
+            <a class="header__logo" href="">
+                <img src="./img/logo.svg" alt="Банкротус" width="216" height="56">
+            </a>
+            <div class="header__time">
+                <div class="header__time-title">Работаем по всей РФ</div>
+                <div class="header__time-info">Пн-Вс 6:00–22:00</div>
+            </div>
+        </div>
+
+        <nav class="header__nav nav">
+            <ul class="list-reset nav__list">
+                <li class="nav__item"><a href="" class="nav__link">Наши услуги</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Тарифы</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Завершенные дела</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Вопросы</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Калькулятор</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Блог</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__socials">
+            <a href="#" class="header__social">
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2001_1182)">
+                      <rect y="0.5" width="40" height="40" fill="#1084BD" fill-opacity="0.6" />
+                      <path d="M28 13.1022L24.9946 28.7923C24.9946 28.7923 24.5741 29.8801 23.4189 29.3584L16.4846 23.8526L16.4524 23.8364C17.3891 22.9654 24.6524 16.2027 24.9698 15.8961C25.4613 15.4214 25.1562 15.1387 24.5856 15.4974L13.8568 22.553L9.71764 21.1108C9.71764 21.1108 9.06626 20.8708 9.00359 20.3491C8.9401 19.8265 9.73908 19.5439 9.73908 19.5439L26.6131 12.6889C26.6131 12.6889 28 12.0579 28 13.1022Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2001_1182">
+                        <rect y="0.5" width="40" height="40" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a>
+
+            <a href="" class="header__social">
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2001_1185)">
+                      <rect y="0.5" width="40" height="40" fill="#1084BD" fill-opacity="0.6" />
+                      <path d="M27.9268 12.5625C25.9512 10.5937 23.3171 9.5 20.5366 9.5C14.7561 9.5 10.0732 14.1667 10.0732 19.9271C10.0732 21.75 10.5854 23.5729 11.4634 25.1042L10 30.5L15.561 29.0417C17.0976 29.8438 18.7805 30.2812 20.5366 30.2812C26.3171 30.2812 31 25.6146 31 19.8542C30.9268 17.1563 29.9024 14.5312 27.9268 12.5625ZM25.5854 23.6458C25.3659 24.2292 24.3415 24.8125 23.8293 24.8854C23.3902 24.9583 22.8049 24.9583 22.2195 24.8125C21.8537 24.6667 21.3415 24.5208 20.7561 24.2292C18.122 23.1354 16.439 20.5104 16.2927 20.2917C16.1463 20.1458 15.1951 18.9062 15.1951 17.5937C15.1951 16.2812 15.8537 15.6979 16.0732 15.4062C16.2927 15.1146 16.5854 15.1146 16.8049 15.1146C16.9512 15.1146 17.1707 15.1146 17.3171 15.1146C17.4634 15.1146 17.6829 15.0417 17.9024 15.5521C18.122 16.0625 18.6341 17.375 18.7073 17.4479C18.7805 17.5938 18.7805 17.7396 18.7073 17.8854C18.6341 18.0312 18.561 18.1771 18.4146 18.3229C18.2683 18.4687 18.1219 18.6875 18.0488 18.7604C17.9024 18.9062 17.7561 19.0521 17.9024 19.2708C18.0488 19.5625 18.561 20.3646 19.3659 21.0937C20.3902 21.9687 21.1951 22.2604 21.4878 22.4063C21.7805 22.5521 21.9268 22.4792 22.0732 22.3333C22.2195 22.1875 22.7317 21.6042 22.878 21.3125C23.0244 21.0208 23.2439 21.0938 23.4634 21.1667C23.6829 21.2396 25 21.8958 25.2195 22.0417C25.5122 22.1875 25.6585 22.2604 25.7317 22.3333C25.8049 22.5521 25.8049 23.0625 25.5854 23.6458Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2001_1185">
+                        <rect y="0.5" width="40" height="40" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a>
+
+            <a class="header__social" href="">
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2001_1188)">
+                      <rect y="0.5" width="40" height="40" fill="#1084BD" fill-opacity="0.6" />
+                      <path d="M20.9825 27.5C13.466 27.5 9.17864 22.2447 9 13.5H12.7651C12.8888 19.9184 15.6646 22.6371 17.8632 23.1977V13.5H21.4085V19.0355C23.5796 18.7973 25.8607 16.2748 26.6302 13.5H30.1755C29.8855 14.9391 29.3075 16.3017 28.4776 17.5025C27.6477 18.7033 26.5837 19.7166 25.3523 20.479C26.7269 21.1756 27.941 22.1615 28.9145 23.3717C29.888 24.582 30.5988 25.989 31 27.5H27.0974C26.7373 26.1876 26.0054 25.0128 24.9934 24.1228C23.9814 23.2328 22.7343 22.6673 21.4085 22.497V27.5H20.9825Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2001_1188">
+                        <rect y="0.5" width="40" height="40" rx="8" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a>
+        </div>
+
+        <div class="header__actions">
+            <a class="header__phone" href="">8 800 800-80-80</a>
+            <button type="button" class="btn-reset header__btn">Заказать бесплатный звонок</button>
+        </div>
+        <button
+        class="burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+    </div>
+</header>
+    <main class="main main-article">
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <nav>
+                    <ol>
+                        <li>Главная</li>
+                        <li>Статья</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section class="article-main">
+            <div class="article-container">
+                <div class="article-title">Долги по ГИБДД, ФНС, ПФР</div>
+
+                <div class="article-block">
+                    <div class="article-desc">
+                        <div class="article-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <div class="article-text">
+                            Ut enim ad mLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                            Ut enim ad mLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                        </div>
+                    </div>
+                    <div class="article-picture">
+                        <img src="./img/article-picture.webp" width="615" height="300" alt="Долги по ГИБДД, ФНС, ПФР">
+                    </div>
+                </div>
+
+                <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                </div>
+
+                <div class="article-images">
+                    <img src="./img/big-img.webp" alt="">
+                </div>
+
+                <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                </div>
+
+                <div class="article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad m
+                </div>
+            </div>
+        </section>
+        <!-- <section class="proc">
+    <div class="container">
+        <div class="proc__wrapper">
+            <div class="proc__content">
+                <h2 class="title__section proc__title">Узнайте, подходит ли Вам процедура банкротства</h2>
+                <div class="proc__text">Если банкротство не подходит, мы предложим другие варианты решения Вашей проблемы: например, сокращение размера ежемесячных выплат и т.п.</div>
+
+                <form action="" class="form form-proc">
+                    <div class="form__row form-proc__row">
+                        <input type="text" class="input form-proc__input" placeholder="Сумма долга">
+                        <input type="text" class="input form-proc__input" placeholder="Имя">
+                    </div>
+                    <div class="form__row form-proc__row">
+                        <input type="text" class="input form-proc__input" placeholder="Телефон">
+                    </div>
+
+                    <div class="form__bottom">
+                        <div class="form__policy">
+                            <input type="checkbox">
+                            <span>
+                                отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с ФЗ «О персональных данных» от 27.07.2006 N 152-ФЗ
+                                Отправляя свои данные, Вы соглашаетесь с политикой конфиденциальности
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-reset btn--gold form-proc__btn">
+                        <span>Узнать</span>
+                    </button>
+                </form>
+            </div>
+            <div class="proc__right">
+                <div class="proc__img">
+                    <img src="./img/proc-person.webp" alt="Узнайте, подходит ли Вам процедура банкротства">
+                </div>
+                <div class="proc__circle">
+                    <svg width="800" height="552" viewBox="0 0 820 552" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       
+
+                        <g>
+                        <circle opacity="0.4" cx="382.5" cy="382.5" r="382" stroke="#1084BD" />
+                        <circle opacity="0.4" cx="382.5" cy="382.5" r="341" stroke="#1084BD" />
+                        <circle opacity="0.4" cx="382.5" cy="382.5" r="294" stroke="#1084BD" />
+
+                        <circle class="circle" r="7">
+                            <animateMotion
+                              dur="25s"
+                              repeatCount="indefinite"
+                              path="M764.5,382.5 A382,382 0 1,0 0.5,382.5 A382,382 0 1,0 764.5,382.5" />
+                        </circle>
+
+                        <circle class="circle" r="5">
+                            <animateMotion
+                              dur="20s"
+                              repeatCount="indefinite"
+                              path="M382.5,41.5 A341,341 0 1,1 382.5,723.5 A341,341 0 1,1 382.5,41.5" />
+                        </circle>
+
+                        <circle class="circle" r="3">
+                            <animateMotion
+                              dur="15s"
+                              repeatCount="indefinite"
+                              path="M676.5,382.5 A294,294 0 1,0 88.5,382.5 A294,294 0 1,0 676.5,382.5" />
+                        </circle>
+                        </g>
+                       
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="proc">
+    <div class="container">
+        <div class="proc__wrapper">
+            <div class="proc__content">
+                <h2 class="title__section proc__title">Узнайте, подходит ли Вам процедура банкротства</h2>
+                <div class="proc__text">Если банкротство не подходит, мы предложим другие варианты решения Вашей проблемы: например, сокращение размера ежемесячных выплат и т. п.</div>
+
+                <form action="" class="form form-proc">
+                    <div class="form__row form-proc__row">
+                        <input type="text" class="input form-proc__input" placeholder="Сумма долга">
+                        <input type="text" class="input form-proc__input" placeholder="Имя">
+                    </div>
+                    <div class="form__row form-proc__row">
+                        <input type="text" class="input form-proc__input" placeholder="Телефон">
+                    </div>
+
+                    <div class="form__bottom">
+                        <div class="form__policy">
+                            <input type="checkbox">
+                            <span>
+                                отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с ФЗ «О персональных данных» от 27.07.2006 N 152-ФЗ
+                                Отправляя свои данные, Вы соглашаетесь с политикой конфиденциальности
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-reset btn--gold form-proc__btn">
+                        <span>Узнать</span>
+                    </button>
+                </form>
+            </div>
+            <div class="proc__right">
+                <div class="proc__img">
+                    <img src="./img/proc-img-new.webp" alt="Узнайте, подходит ли Вам процедура банкротства">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="shield">
+            <div class="article-container">
+                <div class="title__section shield-title">Долги по ГИБДД, ФНС, ПФР </div>
+                <ul class="list-reset shield-list">
+                    <li class="shield-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</li>
+                    <li class="shield-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</li>
+                    <li class="shield-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</li>
+                    <li class="shield-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</li>
+                    <li class="shield-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer__top">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <a class="footer__logo" href="/">
+                    <img src="./img/logo.svg" alt="Банкротус" width="250" height="65">
+                </a>
+                <div class="footer__time">
+                    <div class="footer__time-title">График работы:</div>
+                    <div class="footer__time-text">Пн-Вс 6:00–22:00</div>
+                </div>
+                <div class="footer__rec">ИНН: 0000000000</div>
+                <div class="footer__rec">ОГРН: 0000000000000</div>
+            </div>
+            <div class="footer__col">
+                <nav class="footer__nav">
+                    <ul class="list-reset footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Наши услуги</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Вопросы</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Отзывы</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Калькулятор</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Тарифы</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Блог</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="">Завершенные дела </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__col">
+                <div class="footer__contacts">
+                    <a class="footer__phone" href="">8 800 800-80-80</a>
+                    <button type="button" class="btn-reset btn--blue footer__btn modal-12">Заказать обратный звонок</button>
+                    <a class="footer__mail" href="mailto:bankrotus@yandex.ru">bankrotus@yandex.ru</a>
+                    <div class="footer__socials">
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#151515" />
+                                <path d="M20.9825 27C13.466 27 9.17864 21.7447 9 13H12.7651C12.8888 19.4184 15.6646 22.1371 17.8632 22.6977V13H21.4085V18.5355C23.5796 18.2973 25.8607 15.7748 26.6302 13H30.1755C29.8855 14.4391 29.3075 15.8017 28.4776 17.0025C27.6477 18.2033 26.5837 19.2166 25.3523 19.979C26.7269 20.6756 27.941 21.6615 28.9145 22.8717C29.888 24.082 30.5988 25.489 31 27H27.0974C26.7373 25.6876 26.0054 24.5128 24.9934 23.6228C23.9814 22.7328 22.7343 22.1673 21.4085 21.997V27H20.9825Z" fill="white" />
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#151515" />
+                                <path d="M28 12.6022L24.9946 28.2923C24.9946 28.2923 24.5741 29.3801 23.4189 28.8584L16.4846 23.3526L16.4524 23.3364C17.3891 22.4654 24.6524 15.7027 24.9698 15.3961C25.4613 14.9214 25.1562 14.6387 24.5856 14.9974L13.8568 22.053L9.71764 20.6108C9.71764 20.6108 9.06626 20.3708 9.00359 19.8491C8.9401 19.3265 9.73908 19.0439 9.73908 19.0439L26.6131 12.1889C26.6131 12.1889 28 11.5579 28 12.6022Z" fill="white" />
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#151515" />
+                                <path d="M27.9268 12.0625C25.9512 10.0937 23.3171 9 20.5366 9C14.7561 9 10.0732 13.6667 10.0732 19.4271C10.0732 21.25 10.5854 23.0729 11.4634 24.6042L10 30L15.561 28.5417C17.0976 29.3438 18.7805 29.7812 20.5366 29.7812C26.3171 29.7812 31 25.1146 31 19.3542C30.9268 16.6563 29.9024 14.0312 27.9268 12.0625ZM25.5854 23.1458C25.3659 23.7292 24.3415 24.3125 23.8293 24.3854C23.3902 24.4583 22.8049 24.4583 22.2195 24.3125C21.8537 24.1667 21.3415 24.0208 20.7561 23.7292C18.122 22.6354 16.439 20.0104 16.2927 19.7917C16.1463 19.6458 15.1951 18.4062 15.1951 17.0937C15.1951 15.7812 15.8537 15.1979 16.0732 14.9062C16.2927 14.6146 16.5854 14.6146 16.8049 14.6146C16.9512 14.6146 17.1707 14.6146 17.3171 14.6146C17.4634 14.6146 17.6829 14.5417 17.9024 15.0521C18.122 15.5625 18.6341 16.875 18.7073 16.9479C18.7805 17.0938 18.7805 17.2396 18.7073 17.3854C18.6341 17.5312 18.561 17.6771 18.4146 17.8229C18.2683 17.9687 18.1219 18.1875 18.0488 18.2604C17.9024 18.4062 17.7561 18.5521 17.9024 18.7708C18.0488 19.0625 18.561 19.8646 19.3659 20.5937C20.3902 21.4687 21.1951 21.7604 21.4878 21.9063C21.7805 22.0521 21.9268 21.9792 22.0732 21.8333C22.2195 21.6875 22.7317 21.1042 22.878 20.8125C23.0244 20.5208 23.2439 20.5938 23.4634 20.6667C23.6829 20.7396 25 21.3958 25.2195 21.5417C25.5122 21.6875 25.6585 21.7604 25.7317 21.8333C25.8049 22.0521 25.8049 22.5625 25.5854 23.1458Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__links">
+                    <a href="">Согласие на обработку персональных данных</a>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Согласие на рекламу</a>
+                </div>
+                <div class="footer__paymant">
+                    <img src="./img/payment.webp" alt="Способы оплаты" width="365" height="58">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div class="modal" id="modal-10">
+    <div class="modal__container">
+        <div class="modal__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <div class="modal__title">Получите персональный план списания долгов и точный расчет стоимости бесплатно!</div>
+            <div class="modal__text">Оставьте заявку, и мы свяжемся с вами в течение 5 минут.</div>
+
+            <form action="" class="form modal__form">
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Сумма долга">
+                    <input type="text" class="input modal__input" placeholder="Имя">
+                </div>
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Телефон">
+                </div>
+
+                <div class="form__bottom">
+                    <button type="submit" class="btn-reset btn--blue form__btn modal__btn">Отправить</button>
+                    <div class="form__policy">
+                        <input type="checkbox">
+                        <span>
+                            отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с ФЗ «О персональных данных» от 27.07.2006 N 152-ФЗ
+                            Отправляя свои данные, Вы соглашаетесь с политикой конфиденциальности
+                        </span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-11">
+    <div class="modal__container">
+        <div class="modal__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <div class="modal__title">Получите бесплатную консультацию по вашей ситуации — изучим варианты и этапы действий!</div>
+            <div class="modal__text">Оставьте заявку, и мы свяжемся с вами в течение 5 минут.</div>
+
+            <form action="" class="form modal__form">
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Сумма долга">
+                    <input type="text" class="input modal__input" placeholder="Имя">
+                </div>
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Телефон">
+                </div>
+
+                <div class="form__row">
+                    <textarea class="input "></textarea>
+                </div>
+
+                <div class="form__bottom">
+                    <button type="submit" class="btn-reset btn--blue form__btn modal__btn">Отправить</button>
+                    <div class="form__policy">
+                        <input type="checkbox">
+                        <span>
+                            отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с ФЗ «О персональных данных» от 27.07.2006 N 152-ФЗ
+                            Отправляя свои данные, Вы соглашаетесь с политикой конфиденциальности
+                        </span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-12">
+    <div class="modal__container">
+        <div class="modal__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <div class="modal__title">Профессиональная консультация по всем вопросам!</div>
+            <div class="modal__text">Получите помощь юриста с многолетним опытом в проведении процедуры банкротства.</div>
+
+            <form action="" class="form modal__form">
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Имя">
+                </div>
+                <div class="form__row">
+                    <input type="text" class="input modal__input" placeholder="Телефон">
+                </div>
+
+                <div class="form__bottom">
+                    <button type="submit" class="btn-reset btn--blue form__btn modal__btn">Отправить</button>
+                    <div class="form__policy">
+                        <input type="checkbox">
+                        <span>
+                            отправляя формы на данном сайте, вы даете согласие на обработку персональных данных в соответствии с ФЗ «О персональных данных» от 27.07.2006 N 152-ФЗ
+                            Отправляя свои данные, Вы соглашаетесь с политикой конфиденциальности
+                        </span>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal__article" id="modal-article">
+    <div class="modal__container modal__container-article">
+        <div class="modal__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal__content">
+            <div class="modal__title">Новость № 1 про Путина и банкротство</div>
+            <div class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</div>
+            <div class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</div>
+
+            <div class="modal__article-img">
+                <img src="./img/article-img-modal.webp" alt="">
+            </div>
+
+            <div class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</div>
+            <div class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-thanks" id="modal-thanks">
+    <div class="modal-thanks__container">
+        <div class="modal__close">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="modal-thanks__content">
+            <div class="modal-thanks__logo">
+                <img src="./img/logo.svg" alt="Банкротус">
+            </div>
+
+            <div class="modal-thanks__title">Спасибо за вашу заявку!</div>
+            <div class="modal-thanks__desc">Мы свяжемся с вами в течение 5 минут.</div>
+        </div>
+
+        <div class="modal-thanks__img">
+            <img src="./img/thanks-modal-img.webp" alt="">
+        </div>
+    </div>
+</div>
+
+    <div class="modal modal-offer" id="modal-offer">
+        <div class="modal-offer__container">
+            <div class="modal__close">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#737373" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="modal-offer__content">
+                <div class="modal-offer__logo">
+                    <img src="./img/logo.svg" alt="Банкротус">
+                </div>
+
+                <div class="modal-offer__title">Спишем все долги и кредиты за 15 000 руб. в месяц или заплатим 1 000 000 руб.</div>
+                <button type="button" class="btn-reset btn--gold modal-offer__btn"><span>Получить бесплатную консультацию</span></button>
+            </div>
+
+            <div class="modal-offer__img">
+                <img src="./img/modal-offer.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  </body>
+
+</html>
